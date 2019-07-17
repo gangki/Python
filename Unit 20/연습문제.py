@@ -61,32 +61,15 @@ for i in range(1, test_case + 1):
 # 5이상 9이하의 홀수를 입력받아 다이아몬드 형태의 별을 출력하는 프로그램을 작성하시오.
 # N = 5, 7, 9
 
-n = int(input('5이상 9이하의 홀수를 입력하시오. (예 : 5 or 7 or 9)'))
-for i in range(1, n+1):
-    for k in range(1, n+1):
-        if k < 2*i-1   :
-            print('*', end = '')
-    print()
+n = int(input('라인 No. : '))
+
+for i in range(1, n + 1):
+    print(' ' * (n - i) + '*' * (2 * i - 1))
+
+    if n == i:
+        for k in range(n - 1, 0, -1):
+            print(' ' * (n - k) + '*' * (2 * k - 1))
 
 
-
-
-a = int(input())
-for i in (range(1, a+1)):
-    for m in range(1, a-2):
-        if m < a-1-i:
-        print('x', end = '')
-    print()
-
-
-
-
-for i in reversed(range(0, n-1, 2)):
-    for k in range(0, n):
-        if k < i+1 :
-            print('*', end = '')
-    print()
-
-
-
-
+# 2. 디지털 시계에 하루동안(00:00~23:59) 3이 표시되는 시간을 초로 환산하면 총 몇 초(second) 일까요?
+# 디지털 시계는 하루동안 다음과 같이 시:분(00:00~23:59)으로 표시됨.
